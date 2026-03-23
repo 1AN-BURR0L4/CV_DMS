@@ -250,3 +250,64 @@ h2 {
     margin-top: 10px;
     font-size: 1.5rem;
 }
+.main-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.header-content p {
+    color: #cbd5e1;
+    margin: 6px 0;
+}
+
+.hero-section,
+.info-section,
+.members-section {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-section h2,
+.info-section h2,
+.members-section h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.hero-section p,
+.info-section p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.skills-grid span {
+    background: #0f172a;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.members-section .grid {
+    margin-top: 20px;
+}

@@ -1,75 +1,275 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>CV - Ian Eduardo Burrola Gutiérrez</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Ian Eduardo Burrola Gutiérrez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --sidebar-bg: #2c3e50;
+      --main-bg: #f5f7fa;
+      --text-dark: #2c3e50;
+      --text-light: #ffffff;
+      --github-teal: #64a8b1; 
+      --back-btn-color: #64a8b1; /* Color azul/turquesa del botón de regreso */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #4a707a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Estilo del botón de regreso (flecha azul) */
+    .back-btn {
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--back-btn-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background-color 0.2s;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background-color: #528e96;
+      transform: scale(1.1);
+    }
+
+    .cv-container {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      max-width: 1100px;
+      width: 100%;
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* BARRA LATERAL IZQUIERDA */
+    .sidebar {
+      background-color: var(--sidebar-bg);
+      color: var(--text-light);
+      padding: 40px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.1);
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h1 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #bdc3c7;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .contact-item i.fa-map-marker-alt { color: #ff5e62; }
+    .contact-item i.fa-envelope { color: #82b4ff; }
+    .contact-item i.fa-phone-alt { color: #a29bfe; }
+
+    .skills-section {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .skill-tag {
+      background: rgba(255,255,255,0.1);
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: block;
+      font-size: 0.9rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* CONTENIDO DERECHA */
+    .main-content {
+      background-color: var(--main-bg);
+      padding: 40px;
+    }
+
+    .content-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .content-card h3 {
+      color: var(--text-dark);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .content-card p, .content-card li {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .item-list {
+      list-style: none;
+    }
+
+    .item-list li {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+
+    .item-list li::before {
+      content: "•";
+      color: var(--text-dark);
+      font-weight: bold;
+    }
+
+    .github-btn {
+      display: inline-block;
+      background-color: var(--github-teal);
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .github-btn:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 850px) {
+      .cv-container { grid-template-columns: 1fr; }
+      .back-btn { top: 10px; left: 10px; width: 40px; height: 40px; font-size: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <aside class="sidebar">
-            <img src="../../img/ian.jpg" alt="Foto de Ian" class="profile-pic" style="width:150px; height:150px; object-fit:cover; border-radius:50%;">
 
-            <h1>Ian Eduardo Burrola Gutiérrez</h1>
-            <p class="role">Ingeniería en Computación</p>
+  <a href="../../index.html" class="back-btn">←</a>
 
-            <div class="contact">
-                <p>📍 Toluca de Lerdo, México</p>
-                <p>📧 iburrolag001@alumno.uaemex.mx</p>
-                <p>📞 722 855 8345</p>
-            </div>
+  <div class="cv-container">
+    <div class="sidebar">
+      <img src="../../img/ian.jpg" alt="Ian Eduardo" class="profile-img">
+      <h1>Ian Eduardo Burrola Gutiérrez</h1>
+      <h2>Ingeniería en Computación</h2>
 
-            <div class="skills">
-                <h3>Habilidades</h3>
-                <div class="skill">Java</div>
-                <div class="skill">Python</div>
-                <div class="skill">C++</div>
-                <div class="skill">Arduino</div>
-                <div class="skill">Machine Learning</div>
-                <div class="skill">Videojuegos</div>
-                <div class="skill">Arquitectura Hardware</div>
-            </div>
-        </aside>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Toluca de Lerdo, México</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>iburrolag001@alumno.uaemex.mx</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>722 855 8345</span>
+        </div>
+      </div>
 
-        <main class="main-content">
-            <section class="card">
-                <h2>Perfil Profesional</h2>
-                <p>
-                    Especialista en el desarrollo de aplicaciones y sistemas computacionales, con dominio en Java, Python 
-                    y ecosistemas de hardware como Arduino IDE. Apasionado por el desarrollo de videojuegos, 
-                    la arquitectura de hardware y la robótica, con experiencia en la implementación de soluciones 
-                    tecnológicas innovadoras.
-                </p>
-            </section>
-
-            <section class="card">
-                <h2>Educación</h2>
-                <ul>
-                    <li><strong>Licenciatura en Ingeniería en Computación</strong> - Facultad de Ingeniería UAEMex (2022 - 2027)</li>
-                </ul>
-            </section>
-
-            <section class="card">
-                <h2>Proyectos Destacados</h2>
-                
-                <p><strong>Videojuego Puzzle: Combinación de Colores</strong> (Ago 2023 – Dic 2023)</p>
-                <ul>
-                    <li>Desarrollé un editor de niveles dinámico para creación gráfica intuitiva.</li>
-                    <li>Liderazgo técnico en equipo para la integración de mecánicas de juego.</li>
-                </ul>
-
-                <p><strong>Detector de Insectos / Machine Learning</strong> (Ago 2024 – Dic 2024)</p>
-                <ul>
-                    <li>Entrenamiento de modelos de visión artificial para clasificación de especies en tiempo real con alta precisión.</li>
-                </ul>
-
-                <p><strong>Robot Micromouse / Radiocontrol</strong> (Ago 2025 – Dic 2025)</p>
-                <ul>
-                    <li>Diseño de arquitectura de hardware (motores paso a paso, sensores, protoboards).</li>
-                    <li>Programación de lógica de navegación y comunicación bidireccional PC-Robot.</li>
-                </ul>
-            </section>
-        </main>
+      <div class="skills-section">
+        <span class="skill-tag">Java / Python / C++</span>
+        <span class="skill-tag">Arduino IDE / Microcontroladores</span>
+        <span class="skill-tag">MySQL / PostgreSQL</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Git / GitHub</span>
+      </div>
     </div>
+
+    <div class="main-content">
+      <div class="content-card">
+        <h3>Perfil Profesional</h3>
+        <p>Especialista en el desarrollo de aplicaciones y sistemas computacionales, con dominio en Java, Python y ecosistemas de hardware. Apasionado por la robótica, la arquitectura de hardware y el desarrollo de soluciones funcionales.</p>
+      </div>
+
+      <div class="content-card">
+        <h3>Educación</h3>
+        <ul class="item-list">
+          <li><strong>Ingeniería en Computación</strong> - UAEMéx (Facultad de Ingeniería)</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h3>Certificaciones</h3>
+        <ul class="item-list">
+          <li><strong>Primeros Auxilios</strong> - Secretaría de Gestión Integral de Riesgos y de Protección Civil</li>
+          <li><strong>Introducción a la Ciencia de Datos</strong> - Cisco Networking Academy</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h3>Idiomas</h3>
+        <p>Inglés B2</p>
+      </div>
+
+      <div class="content-card">
+        <h3>Links</h3>
+        <div style="margin-top: 10px;">
+          <a href="https://github.com/1AN-BURR0L4" target="_blank" class="github-btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

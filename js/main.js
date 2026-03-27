@@ -25,5 +25,5 @@ function ordenar() {
 // Evento cuando cambias el select
 sortSelect.addEventListener("change", ordenar);
 
-// Ejecutar al cargar la página
+// Ejecutar al cargar la página cambio
 window.addEventListener("DOMContentLoaded", ordenar);

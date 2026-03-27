@@ -84,6 +84,14 @@
             </p>
         </section>
 
+        <section class="controls">
+            <label for="sort">Ordenar por:</label>
+            <select id="sort">
+                <option value="az">Nombre (A-Z)</option>
+                <option value="za">Nombre (Z-A)</option>
+            </select>
+        </section>
+
         <div class="filtros-container">
             <h3>🔍 Filtrar por habilidad</h3>
             <div class="filtros-buttons">
@@ -112,6 +120,7 @@
             <div class="grid" id="grid-integrantes">
 
             <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript">
+                <div class="card-index" data-name="Diego Miguel Segundo"></div>
                 <a href="cv/dms/">
                     <img src="img/dms.png" alt="Diego Miguel Segundo">
                     <h3>Diego Miguel Segundo</h3>
@@ -123,14 +132,25 @@
                     <span class="skill-tag">🟨 JavaScript</span>
                 </div>
             </div>
-
-            <div class="card-index">
-                <a href="cv/dibg/">
-                    <img src="img/dibg.jpeg" alt="Diana Ivon Benitez Gonzalez">
-                    <h3>Diana Ivon Benitez Gonzalez</h3>
-                </a>
+            
+            <div class="card-index" data-name="Diana Ivon Benitez Gonzalez">
+                <div class="card-index" data-skills="Java,Python,PostgreSQL,Mantenimiento de Equipos,Soporte técnico,Redes,Gestión de proyectos">
+                    <a href="cv/dibg/">
+                        <img src="img/dibg.png" alt="Diana Ivon Benitez Gonzalez">
+                        <h3>Diana Ivon Benitez Gonzalez</h3>
+                    </a>
+                     <div class="skills-tags">
+                        <span class="skill-tag" data-skill="Java">☕ Java</span>
+                        <span class="skill-tag" data-skill="Python">🐍 Python</span>
+                        <span class="skill-tag" data-skill="PostgreSQL">🐘 PostgreSQL</span>
+                        <span class="skill-tag" data-skill="Mantenimiento de Equipos">⚙️ Mantenimiento de Equipos</span>
+                        <span class="skill-tag" data-skill="Soporte Técnico">🛠️ Soporte Técnico</span>
+                        <span class="skill-tag" data-skill="Redes">🌐 Redes</span>
+                    </div>
+                </div>
             </div>
-
+        
+            <div class="card-index" data-name="Jessica Mijal Lopez De Jesus">
           <div class="card-index" data-skills="HTML,CSS,JavaScript,Python,Ciberseguridad">
     <a href="cv/Mijal/">
         <img src="img/Mijal.png" alt="Jessica Mijal Lopez De Jesus">
@@ -145,7 +165,9 @@
         <span class="skill-tag">🔀 Trabajo en equipo</span>
     </div>
            </div>
+           </div>
             
+            <div class="card-index" data-name="Carlos Miguel Solano">
             <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript,Java,Bases de Datos,MySQL,PostgreSQL,Git y GitHub">
                 <a href="cv/carlos/">
                     <img src="img/CS.jpeg" alt="Carlos Miguel Solano">
@@ -162,7 +184,9 @@
                     <span class="skill-tag">🔀 Trabajo en equipo</span>
                 </div>
             </div>
+            </div>
 
+            <div class="card-index" data-name="Haide Sánchez Gutierez">
             <div class="card-index" data-skills="HTML,PostgreSQL,Linux,Redes,JavaScript">
                 <a href="cv/Haide/">
                     <img src="img/hsg.png" alt="Haide Sanchez Gutierrez">
@@ -176,7 +200,9 @@
                     <span class="skill-tag">🟨 JavaScript</span>
                 </div>
             </div>
+            </div>
 
+            <div class="card-index" data-name="Aram González Ronquillo">
             <div class="card-index">
                 <a href="cv/aram/">
                     <img src="img/aram.png" alt="Aram Gonzalez Ronquillo">
@@ -190,7 +216,9 @@
                     <span class="skill-tag">🔀 Trabajo en equipo</span>
                 </div>
             </div>
+            </div>
 
+            <div class="card-index" data-name="David Emanuel Vaca Gómez">
             <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript,Java,Bases de Datos,MySQL,PostgreSQL,Git y GitHub">
                 <a href="cv/DavidV/">
                     <img src="img/davidv.jpeg" alt="David Emanuel Vaca Gómez">
@@ -206,15 +234,18 @@
                     <span class="skill-tag">🔀 Trabajo en equipo</span>
                 </div>
             </div>
+            </div>
 
-
+            <div class="card-index" data-name="Alejandra Hernández">
             <div class="card-index">
                 <a href="cv/alejandra/">
                     <img src="img/alejandra.jpg" alt="Alejandra Hernández">
                     <h3>Alejandra Hernández</h3>
                 </a>
             </div>
-               
+            </div>
+
+            <div class="card-index" data-name="Ismael Mendoza López">   
             <div class="card-index">
                 <a href="cv/Ismael/">
                     <img src="img/ismael.jpg" alt="Ismael Mendoza López">
@@ -223,7 +254,9 @@
                 </a>
                 
             </div>
+            </div>
 
+            <div class="card-index" data-name="Adrián Portillo Moreno">
             <div class="card-index">
                 <a href="cv/Adrian/">
                     <img src="img/adrian.jpg" alt="Adrian Portillo Moreno">
@@ -231,7 +264,9 @@
             
                 </a>
             </div>
+            </div>
 
+            <div class="card-index" data-name="José Gabriel Sánchez Gil">
             <div class="card-index">
                 <a href="cv/Gabriel/">
                     <img src="img/gabo.jpg" alt="Jose Gabriel Sanchez Gil">
@@ -239,20 +274,25 @@
     
                 </a>
             </div>
+            </div>
+
+            <div class="card-index" data-name="David Uriel Linares Garay">
             <div class="card-index">
                 <a href="cv/DavidCV/index.html">
                     <img src="img/davidlg.jpeg" alt="David Uriel Linares Garay">
                     <h3>David Uriel Linares Garay</h3>
                 </a>
             </div>
+            </div>
 
-
+            <div class="card-index" data-name="Ian Eduardo Burrola Gutiérrez">
             <div class="card-index">
                 <a href="cv/ian/">
                     <img src="img/ian.jpg" alt="Ian Eduardo Burrola Gutierrez">
                     <h3>Ian Eduardo Burrola Gutierrez</h3>
     
                 </a>
+            </div>
             </div>
 
         </section>
@@ -263,5 +303,6 @@
         <p>Portafolio grupal | Tecnologías Computacionales I | Ingeniería en Computación | UAEMex</p>
     </footer>
     <script src="js/filtros.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -84,17 +85,45 @@
             </p>
         </section>
 
+        <div class="filtros-container">
+            <h3>🔍 Filtrar por habilidad</h3>
+            <div class="filtros-buttons">
+                <button class="filtro-boton reset-btn activo" data-skill="todos">📋 Todos</button>
+                <button class="filtro-boton" data-skill="Desarrollo Web">🌐 Desarrollo Web</button>
+                <button class="filtro-boton" data-skill="HTML">📄 HTML</button>
+                <button class="filtro-boton" data-skill="CSS">🎨 CSS</button>
+                <button class="filtro-boton" data-skill="JavaScript">🟨 JavaScript</button>
+                <button class="filtro-boton" data-skill="Python">🐍 Python</button>
+                <button class="filtro-boton" data-skill="Java">☕ Java</button>
+                <button class="filtro-boton" data-skill="Bases de Datos">🗄️ Bases de Datos</button>
+                <button class="filtro-boton" data-skill="MySQL">🐬 MySQL</button>
+                <button class="filtro-boton" data-skill="PostgreSQL">🐘 PostgreSQL</button>
+                <button class="filtro-boton" data-skill="Linux">🐧 Linux</button>
+                <button class="filtro-boton" data-skill="Git y GitHub">🔀 Git/GitHub</button>
+                <button class="filtro-boton" data-skill="Redes">🌐 Redes</button>
+                <button class="filtro-boton" data-skill="Soporte Técnico">🛠️ Soporte Técnico</button>
+                <button class="filtro-boton" data-skill="Mantenimiento de Equipos">⚙️ Mantenimiento</button>
+                <button class="filtro-boton" data-skill="Trabajo en Equipo">🤝 Trabajo en Equipo</button>
+            </div>
+            <div class="contador-filtro" id="contador-resultados">Mostrando todos los integrantes</div>
+        </div>
+
         <section class="members-section">
             <h2>Integrantes</h2>
-            <div class="grid">
+            <div class="grid" id="grid-integrantes">
 
-          <div class="card-index">
+            <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript">
                 <a href="cv/dms/">
-                    <img src="img/dms.jpeg" alt="Diego Miguel Segundo">
+                    <img src="img/dms.png" alt="Diego Miguel Segundo">
                     <h3>Diego Miguel Segundo</h3>
                 </a>
+                <div class="skills-tags">
+                    <span class="skill-tag">🌐 Desarrollo Web</span>
+                    <span class="skill-tag">📄 HTML</span>
+                    <span class="skill-tag">🎨 CSS</span>
+                    <span class="skill-tag">🟨 JavaScript</span>
+                </div>
             </div>
-
 
             <div class="card-index">
                 <a href="cv/dibg/">
@@ -103,18 +132,36 @@
                 </a>
             </div>
 
-            <div class="card-index">
-                <a href="cv/Mijal/">
-                    <img src="img/Mijal.jpeg" alt="Jessica Mijal Lopez De Jesus">
-                    <h3>Jessica Mijal Lopez De Jesus</h3>
-                </a>
-            </div>
+          <div class="card-index" data-skills="HTML,CSS,JavaScript,Python,Ciberseguridad">
+    <a href="cv/Mijal/">
+        <img src="img/Mijal.png" alt="Jessica Mijal Lopez De Jesus">
+        <h3>Jessica Mijal Lopez De Jesus</h3>
+    </a>
+    <div class="skills-tags">
+        <span class="skill-tag">📄 HTML</span>
+        <span class="skill-tag">🎨 CSS</span>
+        <span class="skill-tag">🟨 JavaScript</span>
+        <span class="skill-tag">🐍 Python</span>
+        <span class="skill-tag">🔐 Ciberseguridad</span>
+        <span class="skill-tag">🔀 Trabajo en equipo</span>
+    </div>
+           </div>
             
-            <div class="card-index">
+            <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript,Java,Bases de Datos,MySQL,PostgreSQL,Git y GitHub">
                 <a href="cv/carlos/">
                     <img src="img/CS.jpeg" alt="Carlos Miguel Solano">
                     <h3>Carlos Miguel Solano</h3>
                 </a>
+                <div class="skills-tags">
+                    <span class="skill-tag">🌐 Desarrollo Web</span>
+                    <span class="skill-tag">📄 HTML</span>
+                    <span class="skill-tag">🎨 CSS</span>
+                    <span class="skill-tag">🟨 JavaScript</span>
+                    <span class="skill-tag">☕ Java</span>
+                    <span class="skill-tag">🗄️ Bases de Datos</span>
+                    <span class="skill-tag">🐬 MySQL</span>
+                    <span class="skill-tag">🔀 Trabajo en equipo</span>
+                </div>
             </div>
 
             <div class="card-index">
@@ -126,25 +173,36 @@
 
             <div class="card-index">
                 <a href="cv/aram/">
-                    <img src="img/aram.jpeg" alt="Aram Gonzalez Ronquillo">
+                    <img src="img/aram.png" alt="Aram Gonzalez Ronquillo">
                     <h3>Aram Gonzalez Ronquillo</h3>
                 </a>
             </div>
+
+            <div class="card-index" data-skills="Desarrollo Web,HTML,CSS,JavaScript,Java,Bases de Datos,MySQL,PostgreSQL,Git y GitHub">
+                <a href="cv/DavidV/">
+                    <img src="img/davidv.jpeg" alt="David Emanuel Vaca Gómez">
+                    <h3>David Emanuel Vaca Gómez</h3>
+                </a>
+                <div class="skills-tags">
+                    <span class="skill-tag">🌐 Desarrollo Web</span>
+                    <span class="skill-tag">📄 HTML</span>
+                    <span class="skill-tag">🎨 CSS</span>
+                    <span class="skill-tag">🟨 JavaScript</span>
+                    <span class="skill-tag">☕ Java</span>
+                    <span class="skill-tag">🗄️ Bases de Datos</span>
+                    <span class="skill-tag">🔀 Trabajo en equipo</span>
+                </div>
+            </div>
+
+
             <div class="card-index">
                 <a href="cv/alejandra/">
                     <img src="img/alejandra.jpg" alt="Alejandra Hernández">
                     <h3>Alejandra Hernández</h3>
                 </a>
             </div>
-
-            <div class="card-index">
-                <a href="cv/David/">
-                    <img src="img/david.jpeg" alt="David Emanuel Vaca Gómez">
-                    <h3>David Emanuel Vaca Gómez</h3>
-                 </a>
-            </div>
                
-             <div class="card-index">
+            <div class="card-index">
                 <a href="cv/Ismael/">
                     <img src="img/ismael.jpg" alt="Ismael Mendoza López">
                     <h3>Ismael Mendoza López</h3>
@@ -168,24 +226,32 @@
     
                 </a>
             </div>
-
-
-                        <div class="card-index">
-                <a href="cv/ian/">
-                    <img src="img/ian.jpg" alt="Ian Eduardo Burrola Gutierrez">
-                    <h3>Ian Eduardo Burrola Gutiérrez</h3>
-    
+            <div class="card-index">
+                <a href="cv/DavidCV/index.html">
+                    <img src="img/davidlg.jpeg" alt="David Uriel Linares Garay">
+                    <h3>David Uriel Linares Garay</h3>
                 </a>
             </div>
 
-            
-        </div>
+            <div class="card-index" data-skills="Desarrollo Web,HTML,Soporte Técnico,JavaScript,Java,Bases de Datos,MySQL,PostgreSQL,Git y GitHub">
+                <a href="cv/ian/">
+                    <img src="img/davidv.jpeg" alt="Ian Eduardo Burrola Gutiérrez">
+                    <h3>Ian Eduardo Burrola Gutiérrez</h3>
+                </a>
+                <div class="skills-tags">
+                    <span class="skill-tag">🌐 Desarrollo Web</span>
+                    <span class="skill-tag">📄 HTML</span>
+                    <span class="skill-tag">🎨 Soporte Técnico</span>
+                    <span class="skill-tag">🟨 JavaScript</span>
+                    <span class="skill-tag">☕ Java</span>
+                    <span class="skill-tag">🗄️ Bases de Datos</span>
+                    <span class="skill-tag">🔀 Trabajo en equipo</span>
+                </div>
+            </div>
 
-
-            
-        </div>
-
-
+    
+                </a>
+            </div>
 
         </section>
 
@@ -194,5 +260,6 @@
     <footer>
         <p>Portafolio grupal | Tecnologías Computacionales I | Ingeniería en Computación | UAEMex</p>
     </footer>
+    <script src="js/filtros.js"></script>
 </body>
 </html>
